@@ -1,14 +1,16 @@
 import React from 'react';
 import Chatcard from "../Chatcard/Chatcard";
+import data from "../../data.json";
 
 function Chat() {
     return (
         <div>
-            <Chatcard />
-            <Chatcard />
-            <Chatcard />
-            <Chatcard />
-            <Chatcard />
+            {data.map((item) => {
+            return (<Chatcard
+            message={item.message}
+            username={item.username}
+            date={item.date} /> )
+            })}
         </div>
     );
 }

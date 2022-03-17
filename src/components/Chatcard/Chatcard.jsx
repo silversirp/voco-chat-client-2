@@ -1,12 +1,17 @@
 import React from 'react';
 
-function Chatcard() {
+function Chatcard({message, username, date}) {
     return (
         <div className="chat-card">
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur deserunt dolorem dolores
-                eos et expedita facilis illum, minus modi neque, praesentium, provident quibusdam quis quod saepe sit
-                soluta vel.
-            </div>
+            <p>
+                {message}
+            </p>
+            <p>
+                {username}
+            </p>
+            <p>
+                {date}
+            </p>
         </div>
     );
 }
