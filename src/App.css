@@ -15,10 +15,20 @@
 
 .chat-component {
     margin: auto;
-    width: 33vw;
-    height: 50vh;
+    width: 60%;
+    height: 70%;
     border-radius: 1%;
     color: aliceblue;
     border: 5px solid black;
     background: black;
+    overflow: auto;
+}
+
+.chat-card {
+    margin: auto;
+    margin-top: 2%;
+    width: 95%;
+    background: gray;
+    padding: 2%;
+    border-radius: 1%;
 }

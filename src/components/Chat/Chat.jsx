@@ -1,9 +1,14 @@
 import React from 'react';
+import Chatcard from "../Chatcard/Chatcard";
 
 function Chat() {
     return (
         <div>
-            <p>Chat kast</p>
+            <Chatcard />
+            <Chatcard />
+            <Chatcard />
+            <Chatcard />
+            <Chatcard />
         </div>
     );
 }
