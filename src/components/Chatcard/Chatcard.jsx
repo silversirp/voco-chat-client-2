@@ -1,17 +1,20 @@
 import React from 'react';
 
-function Chatcard({message, username, date}) {
+function Chatcard({message, author, date}) {
     return (
         <div className="chat-card">
             <p>
                 {message}
             </p>
-            <p>
-                {username}
-            </p>
-            <p>
-                {date}
-            </p>
+            <div className="user-name">
+                <p>
+                    {author}
+                </p>
+                <p>
+                    {date}
+                </p>
+            </div>
+
         </div>
     );
 }

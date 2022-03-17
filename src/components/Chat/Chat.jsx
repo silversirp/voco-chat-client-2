@@ -8,7 +8,7 @@ function Chat() {
             {data.map((item) => {
             return (<Chatcard
             message={item.message}
-            username={item.username}
+            author={item.username}
             date={item.date} /> )
             })}
         </div>
