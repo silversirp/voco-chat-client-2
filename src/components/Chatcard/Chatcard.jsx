@@ -7,12 +7,13 @@ function Chatcard({message, author, date}) {
                 {message}
             </p>
             <div className="user-name">
+                <p>{author} </p>
                 <p>
-                    {author}
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="50"/>
+                    </svg>
                 </p>
-                <p>
-                    {date}
-                </p>
+                <p> {date}</p>
             </div>
 
         </div>

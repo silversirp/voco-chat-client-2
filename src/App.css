@@ -15,13 +15,14 @@
 
 .chat-component {
     margin: auto;
-    width: 60%;
+    width: 50%;
     height: 70%;
-    border-radius: 1%;
+    border-radius: 15px;
     color: aliceblue;
     border: 5px solid black;
     background: black;
     overflow: auto;
+    padding: 2%;
 }
 
 .chat-card {
@@ -30,10 +31,19 @@
     width: 95%;
     background: gray;
     padding: 2%;
-    border-radius: 1%;
+    border-radius: 15px;
 }
 
 .user-name {
     color: black;
-    padding: 1%;
+    /*padding: 1%;*/
+}
+
+.user-name p {
+    display: inline;
+}
+
+svg {
+    height: 5px;
+    vertical-align: middle;
 }

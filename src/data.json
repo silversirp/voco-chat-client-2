@@ -28,6 +28,18 @@
     "username": "Jennifer Smith",
     "message": "lorem ipsum dolor est commit my message lorem ipsum dolor est commit my message lorem ipsum dolor est commit my message",
     "date": "2021-12-06T12:08:05.123Z"
+  },
+  {
+    "id": 6,
+    "username": "Jane Smith",
+    "message": "lorem ipsum dolor est commit my message lorem ipsum dolor est commit my message lorem ipsum dolor est commit my message",
+    "date": "2022-04-06T12:08:05.123Z"
+  },
+  {
+    "id": 7,
+    "username": "Joakim Smith",
+    "message": "lorem ipsum dolor est commit my message lorem ipsum dolor est commit my message lorem ipsum dolor est commit my message",
+    "date": "2022-04-07T12:08:05.123Z"
   }
 ]
 
