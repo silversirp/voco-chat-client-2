@@ -1,6 +1,5 @@
 import React from 'react';
 import Chatcard from "../Chatcard/Chatcard";
-import User from "../User/User";
 import data from "../../data.json";
 
 function Chat() {
@@ -14,9 +13,13 @@ function Chat() {
                         date={item.date} /> )
                 })}
             </div>
-            <div>
-                <User />
+            <div className="input-area">
+                <input id="user" type="text" placeholder="User"/>
+                <textarea name="text" rows="2" id="message" placeholder="Message" maxLength="100"/>
+                <p className="counter">x/100</p>
             </div>
+            
+
         </div>
 
     );
