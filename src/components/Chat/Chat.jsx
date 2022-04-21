@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Chatcard from "../Chatcard/Chatcard";
 import data from "../../data.json";
+import Input from "../Input/Input"
 
 function Chat() {
+    const [messages, setMessages] = useState([]);
+    
+    useEffect(() => {
+        setMessages(data);
+    },[]);
+    
     return (
         <div>
             <div>
-                {data.map((item) => {
+                {messages.map((item) => {
                     return (<Chatcard
                         message={item.message}
                         author={item.username}
@@ -18,7 +25,6 @@ function Chat() {
                 <textarea name="text" rows="2" id="message" placeholder="Message" maxLength="100"/>
                 <p className="counter">x/100</p>
             </div>
-            
 
         </div>
 
