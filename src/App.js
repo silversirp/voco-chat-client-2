@@ -2,9 +2,16 @@ import logo from './VOCO-Logo.svg';
 import './App.css';
 
 import Chat from "./components/Chat/Chat";
-import React from "react";
+import React, {useEffect} from "react";
+import {connectToServer} from './socket-service'
 
 function App() {
+    useEffect(() => {
+        connectToServer()
+            .then((message) => {
+                console.log(message)
+            })
+    },[])
   return (
     <div className="chat-container">
       <img src={logo} className="App-logo" alt="logo"/>
