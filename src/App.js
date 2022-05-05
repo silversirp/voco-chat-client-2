@@ -16,7 +16,7 @@ function App() {
         connectToServer()
             .then((message) => {
                 console.log(message)
-            })
+            });
     },[]);
     
     const handleSubmit = () => {
@@ -45,14 +45,19 @@ function App() {
             <div className="chat-component">
                 <Chat messages={messages}/>
             </div>
+
+        </div>
+        <div className="input-area">
             <Input placeholder="Autor" onChange={setAuthor} value={author}/>
             <Input placeholder="Sõnum" onChange={setMessage} value={message}/>
-            <button type="submit" className="submit-btn" onChange={handleSubmit}>SEND</button>
+            <button className="submit-btn" onClick={handleSubmit}>SEND</button>
         </div>
 
 
-            
+
     </div>
+
+
   );
 }
 
