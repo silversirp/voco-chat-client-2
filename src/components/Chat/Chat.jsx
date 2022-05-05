@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Chatcard from "../Chatcard/Chatcard";
 import data from "../../data.json";
-import Input from "../Input/Input"
 
 function Chat({messages}) {
     return (
         <div>
             <div>
-                {messages.map((item) => {
+                {messages.length !== 0 && messages.map((item) => {
                     return (<Chatcard
                         message={item.message}
                         author={item.username}

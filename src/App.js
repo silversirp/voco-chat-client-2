@@ -37,11 +37,6 @@ function App() {
         
         setMessage('');
     };
-        setMessages([...messages, {
-            message,
-            username: author,
-        }]);
-        setMessage('');
     
   return (
     <div className="chat-container">
@@ -50,8 +45,8 @@ function App() {
             <div className="chat-component">
                 <Chat messages={messages}/>
             </div>
-            <Input placeholder="Author" onChange={setAuthor} value={author}/>
-            <Input placeholder="Message" onChange={setMessage} value={message}/>
+            <Input placeholder="Autor" onChange={setAuthor} value={author}/>
+            <Input placeholder="Sõnum" onChange={setMessage} value={message}/>
             <button type="submit" className="submit-btn" onChange={handleSubmit}>SEND</button>
         </div>
 

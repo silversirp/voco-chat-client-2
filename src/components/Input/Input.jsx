@@ -6,7 +6,7 @@ function Input({placeholder, onChange, value}) {
     return (
         <div className="input-area">
             
-            <input id="message" placeholder={placeholder} value={value} onChange={onChange}/>
+            <input id="message" placeholder={placeholder} value={value} onChange={(e) => onChange(e.target.value)}/>
         </div>
 
     );
