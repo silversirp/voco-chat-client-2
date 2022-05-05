@@ -10,7 +10,7 @@ function Chat({messages}) {
                     return (<Chatcard
                         message={item.message}
                         author={item.username}
-                        date={item.date} /> )
+                        date={item.date} />)
                 })}
             </div>
             <div className="input-area">
