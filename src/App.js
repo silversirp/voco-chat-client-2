@@ -4,13 +4,13 @@ import './App.css';
 import Chat from "./components/Chat/Chat";
 import React, {useEffect, useState} from "react";
 import {connectToServer, socket} from './socket-service'
-
+import data from './data.json'
 import Input from './components/Input/Input';
 
 function App() {
     const [author, setAuthor] = useState('');
     const [message, setMessage] = useState('');
-    const [messages, setMessages] = useState("data");
+    const [messages, setMessages] = useState(data);
     
     useEffect(() => {
         connectToServer()
@@ -42,7 +42,7 @@ function App() {
             username: author,
         }]);
         setMessage('');
-    };
+    
   return (
     <div className="chat-container">
       <img src={logo} className="App-logo" alt="logo"/>
