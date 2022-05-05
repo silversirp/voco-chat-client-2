@@ -9,7 +9,7 @@ import Input from './components/Input/Input';
 
 function App() {
     const [author, setAuthor] = useState('');
-    const [message, setMessage] = useState('');
+    let [message, setMessage] = useState('');
     const [messages, setMessages] = useState(data);
     
     useEffect(() => {
@@ -37,6 +37,13 @@ function App() {
         
         setMessage('');
     };
+
+    const messageLength = () => {
+        console.log('messageLength() triggered')
+      if(message.length >= 100) {
+          alert('Ära trüki nii palju! Lubatud 100. Server kärbib teksti, kui pikema saadad.')
+      }
+    }
     
   return (
     <div className="chat-container">
@@ -45,12 +52,15 @@ function App() {
             <div className="chat-component">
                 <Chat messages={messages}/>
             </div>
-
-        </div>
-        <div className="input-area">
-            <Input placeholder="Autor" onChange={setAuthor} value={author}/>
-            <Input placeholder="Sõnum" onChange={setMessage} value={message}/>
+            <div className="input-area">
+                <Input id="user" placeholder="Autor" onChange={setAuthor} value={author}/>
+                <Input id="message" placeholder="Sõnum" onChange={setMessage} value={message} onKeyUp={messageLength()}/>
+                <p className="counter">{message.length}/100</p>
+            </div>
             <button className="submit-btn" onClick={handleSubmit}>SEND</button>
+        </div>
+        <div>
+
         </div>
 
 

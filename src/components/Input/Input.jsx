@@ -2,12 +2,11 @@ import React from 'react';
 
 
 
-function Input({placeholder, onChange, value}) {
+function Input({id, placeholder, onChange, value}) {
     return (
-        <div className="input-area">
-            
-            <input id="message" placeholder={placeholder} value={value} onChange={(e) => onChange(e.target.value)}/>
-        </div>
+        // <div>
+            <input id={id} placeholder={placeholder} value={value} onChange={(e) => onChange(e.target.value)}/>
+        // </div>
 
     );
 }
