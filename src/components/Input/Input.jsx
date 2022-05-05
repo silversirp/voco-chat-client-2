@@ -2,15 +2,11 @@ import React from 'react';
 
 
 
-function Input({placeholder}) {
+function Input({placeholder, onChange, value}) {
     return (
         <div className="input-area">
-            <input id="user" type="text" placeholder="User"/>
-            <input id="message" placeholder={placeholder}/>
-            <p className="counter">
-                x/100
-            </p>
-            <button type="submit">SEND</button>
+            
+            <input id="message" placeholder={placeholder} value={value} onChange={onChange}/>
         </div>
 
     );

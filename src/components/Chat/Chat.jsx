@@ -3,13 +3,7 @@ import Chatcard from "../Chatcard/Chatcard";
 import data from "../../data.json";
 import Input from "../Input/Input"
 
-function Chat() {
-    const [messages, setMessages] = useState([]);
-    
-    useEffect(() => {
-        setMessages(data);
-    },[]);
-    
+function Chat({messages}) {
     return (
         <div>
             <div>
